@@ -1,4 +1,4 @@
-package com.onubogu.monopolyplus.board;
+package com.onubogu.monopolyplus.board.spaces;
 
 public class Street extends Property{
 

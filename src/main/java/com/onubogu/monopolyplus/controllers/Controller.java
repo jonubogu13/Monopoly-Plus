@@ -1,6 +1,6 @@
 package com.onubogu.monopolyplus.controllers;
 
-import com.onubogu.monopolyplus.board.Property;
+import com.onubogu.monopolyplus.board.spaces.Property;
 
 import java.util.Set;
 
@@ -67,6 +67,9 @@ public abstract class Controller {
     }
     public Set<Property.ColorGroup> getGroupSet() {
         return groupSet;
+    }
+    public Piece getPiece() {
+        return piece;
     }
 
     //----------------Setters------------------------------------

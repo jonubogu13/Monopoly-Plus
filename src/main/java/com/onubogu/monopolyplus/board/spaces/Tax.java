@@ -1,10 +1,12 @@
-package com.onubogu.monopolyplus.board;
+package com.onubogu.monopolyplus.board.spaces;
 
-public class Tax extends Space{
+import com.onubogu.monopolyplus.board.Board;
+import com.onubogu.monopolyplus.board.Space;
+
+public class Tax extends Space {
 
     private int value;
 
-    //dynamic pricing
 
 
     public Tax (String name, int index, int value){

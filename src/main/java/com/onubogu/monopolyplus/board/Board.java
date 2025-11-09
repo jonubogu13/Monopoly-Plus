@@ -1,6 +1,9 @@
 package com.onubogu.monopolyplus.board;
 
+import com.onubogu.monopolyplus.board.spaces.Property;
+import com.onubogu.monopolyplus.board.spaces.Street;
 import com.onubogu.monopolyplus.controllers.Controller;
+import com.onubogu.monopolyplus.controllers.Piece;
 
 import java.util.ArrayList;
 
@@ -8,11 +11,16 @@ public class Board {
 
     private static Board board;
     private ArrayList<Space> boardList;
+    private final Dice dice;
+
+
+
 
 
 
     private Board(){
         boardList = new ArrayList<Space>();
+        dice = new Dice();
     }
 
     public static Board getBoard(){
@@ -21,6 +29,33 @@ public class Board {
             board = new Board();
         }
         return board;
+    }
+
+
+    public void move(Controller player){
+        /*
+        1. roll dice
+        2. update position
+         */
+        int value = dice.rollTwice();
+        Piece piece = player.getPiece();
+        piece.setIndex(piece.getIndex() + value);
+
+
+    }
+
+    public void doSpaceAction(Controller player){
+
+        int index = player.getPiece().getIndex();
+        Space space = boardList.get(index);
+
+        switch(space.getClass()) {
+            case
+
+
+        }
+
+
     }
 
     public void trade(Controller player1, Controller player2, ArrayList<Property> player1Send,

@@ -1,5 +1,7 @@
-package com.onubogu.monopolyplus.board;
+package com.onubogu.monopolyplus.board.spaces;
 
+import com.onubogu.monopolyplus.board.Board;
+import com.onubogu.monopolyplus.board.Space;
 import com.onubogu.monopolyplus.controllers.Controller;
 
 public class Property extends Space {
